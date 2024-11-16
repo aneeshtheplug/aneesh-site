@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Align text centrally */
+  padding: 100px 20px; /* Adjust padding for top and sides */
+  gap: 15px; /* Consistent spacing between elements */
+  background-color: #f5f5f5; /* Light background for contrast */
+  height: 100vh; /* Full viewport height */
+  justify-content: center; /* Center the content vertically */
+  border: 1px solid #ddd; /* Subtle border for better structure */
+  border-radius: 10px; /* Rounded corners for a polished look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.title {
+  font-size: 48px; /* Reduce size for better balance */
+  font-weight: 700; /* Use a stronger weight for emphasis */
+  color: #222; /* Slightly darker text for readability */
+  margin: 0; /* Remove default margin */
+}
+
+.position {
+  font-size: 24px;
+  font-weight: 500;
+  color: #555; /* Softer color for secondary text */
+  margin: 0; /* Remove default margin */
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666; /* Softer color for descriptive text */
+  max-width: 600px; /* Restrict width for readability */
+  line-height: 1.6; /* Improve line spacing */
+  margin: 0; /* Remove default margin */
+}
+
+
+/* Social Links Container */
+.social-links {
+  position: fixed;
+  bottom: 20px; /* Adjust distance from bottom */
+  left: 20px; /* Adjust distance from left */
+  display: flex;
+  gap: 15px; /* Space between logos */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Style for Social Logos */
+.social-links a img {
+  width: 40px; /* Set the width */
+  height: 40px; /* Set the height */
+  object-fit: contain; /* Ensure the aspect ratio of the image is preserved */
+  border-radius: 50%; /* Make logos circular (if applicable) */
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.2); /* Slight enlarge effect on hover */
+}
