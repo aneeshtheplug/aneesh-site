@@ -1,0 +1,118 @@
+/* Global Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Page Container */
+.projects-page {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the page takes full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+/* Title for the Projects Page */
+.big-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: blue;
+}
+
+/* Project Container */
+.project {
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 650px;
+    width: 90%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Title */
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+}
+
+/* Technology List */
+.technologies {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.technologies li {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    color: #555;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    margin-top: 20px;
+    height: 300px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #999;
+    border-radius: 10px;
+    border: 2px dashed #ccc;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .technologies li {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
