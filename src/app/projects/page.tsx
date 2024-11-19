@@ -1,55 +1,102 @@
+'use client'
+
 import NavBar from "../navbar";
-import "./projects.css"; // Import the CSS file
+import "./projects.css";
+import { useState } from "react";
+import ProjectModal from "./projectModal";
+
+const projectsData = [
+    {
+        id: 1,
+        title: "House Party",
+        technologies: ["Django", "React", "Spotify API"],
+        image: "/images/house-party.png",
+        description: "A collaborative music playing system that allows users to create rooms and control music playback through Spotify.",
+        demoLink: "https://houseparty.example.com",
+        githubLink: "https://github.com/aneeshtheplug/House-Party"
+    },
+    {
+        id: 2,
+        title: "Gaucho Ride",
+        technologies: ["SpringBoot", "Javascript", "Google Maps API"],
+        image: "/images/gaucho-ride.png",
+        description: "A ride-sharing platform specifically designed for university students.",
+        demoLink: "https://gauchoride.example.com",
+        githubLink: "https://github.com/ucsb-cs156-s24/proj-gauchoride-s24-5pm-7"
+    },
+    {
+        id: 3,
+        title: "Better Bill Splitter",
+        technologies: ["React-Native", "Firebase", "OCR API"],
+        image: "/images/bill-split.png",
+        description: "A mobile app that helps groups split bills easily using OCR technology to scan receipts.",
+        demoLink: "https://billsplitter.example.com",
+        githubLink: "https://github.com/ucsb-cs184-f24/team01-BillSplitter"
+    }
+];
 
 export default function Projects() {
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const handleProjectClick = (project) => {
+        setSelectedProject(project);
+    };
+
+    const handleCloseModal = () => {
+        setSelectedProject(null);
+    };
+
     return (
         <div>
             <NavBar />
             <div className="projects-page">
-              
-                    <h1 className="big-title">Projects</h1>
-                    {/* Project 1 */}
-                    <div className="project">
-                        <h2 className="project-title">House Party</h2>
-                        <ul className="technologies">
-                            <li>Django</li>
-                            <li>React</li>
-                            <li>Spotify API</li>
-                        </ul>
-                        <div className="image-placeholder">
-                            {/* Add your image later */}
-                            <img src="/images/house-party.png" alt="Project Preview" />
-                        </div>
+                <h1 className="big-title">Projects</h1>
+                
+                {/* Project 1 */}
+                <div className="project" onClick={() => handleProjectClick(projectsData[0])}>
+                    <h2 className="project-title">{projectsData[0].title}</h2>
+                    <ul className="technologies">
+                        {projectsData[0].technologies.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                        ))}
+                    </ul>
+                    <div className="image-placeholder">
+                        <img src={projectsData[0].image} alt="Project Preview" />
                     </div>
+                </div>
 
-                    {/* Project 2 */}
-                    <div className="project">
-                        <h2 className="project-title">Gaucho Ride</h2>
-                        <ul className="technologies">
-                            <li>SpringBoot</li>
-                            <li>Javascript</li>
-                            <li>Google Maps API</li>
-                        </ul>
-                        <div className="image-placeholder">
-                            {/* Add your image later */}
-                            <img src="/images/gaucho-ride.png" alt="Project Preview" />
-                        </div>
+                {/* Project 2 */}
+                <div className="project" onClick={() => handleProjectClick(projectsData[1])}>
+                    <h2 className="project-title">{projectsData[1].title}</h2>
+                    <ul className="technologies">
+                        {projectsData[1].technologies.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                        ))}
+                    </ul>
+                    <div className="image-placeholder">
+                        <img src={projectsData[1].image} alt="Project Preview" />
                     </div>
+                </div>
 
-                    {/* Project 3 */}
-                    <div className="project">
-                        <h2 className="project-title">Better Bill Splitter</h2>
-                        <ul className="technologies">
-                            <li>React-Native</li>
-                            <li>Firebase</li>
-                            <li>OCR API</li>
-                        </ul>
-                        <div className="image-placeholder">
-                            {/* Add your image later */}
-                            <p>[Image Placeholder]</p>
-                        </div>
+                {/* Project 3 */}
+                <div className="project" onClick={() => handleProjectClick(projectsData[2])}>
+                    <h2 className="project-title">{projectsData[2].title}</h2>
+                    <ul className="technologies">
+                        {projectsData[2].technologies.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                        ))}
+                    </ul>
+                    <div className="image-placeholder">
+                        <img src={projectsData[2].image} alt="Project Preview" />
+                    </div>
                 </div>
             </div>
+
+            <ProjectModal
+                isOpen={selectedProject !== null}
+                onClose={handleCloseModal}
+                project={selectedProject}
+            />
         </div>
     );
 }
