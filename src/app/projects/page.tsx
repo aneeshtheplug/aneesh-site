@@ -5,7 +5,18 @@ import "./projects.css";
 import { useState } from "react";
 import ProjectModal from "./projectModal";
 
-const projectsData = [
+type Project = {
+    id: number;
+    title: string;
+    technologies: string[];
+    image: string;
+    description: string;
+    demoLink: string;
+    githubLink: string;
+};
+
+
+const projectsData: Project[] = [
     {
         id: 1,
         title: "House Party",
@@ -35,10 +46,11 @@ const projectsData = [
     }
 ];
 
-export default function Projects() {
-    const [selectedProject, setSelectedProject] = useState(null);
 
-    const handleProjectClick = (project) => {
+export default function Projects() {
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+    const handleProjectClick = (project: Project) => {
         setSelectedProject(project);
     };
 

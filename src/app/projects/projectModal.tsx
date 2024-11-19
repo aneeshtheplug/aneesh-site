@@ -1,7 +1,23 @@
 import { X } from "lucide-react";
 
-const ProjectModal = ({ isOpen, onClose, project }) => {
-  if (!isOpen) return null;
+type Project = {
+  id: number;
+  title: string;
+  technologies: string[];
+  image: string;
+  description: string;
+  demoLink: string;
+  githubLink: string;
+}
+
+type ProjectModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  project: Project | null;
+}
+
+const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
+  if (!isOpen || !project) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
