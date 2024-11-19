@@ -47,13 +47,15 @@ export default function About() {
         {/* About Paragraph Section */}
         <div className="about-paragraph">
           <p>
-            Originally, I entered college as a statistics and data science
+          {
+            `Originally, I entered college as a statistics and data science
             major but took a few computer science classes and realized my
             interests were more aligned with building software applications.
             I've spent my time in college completing many full-stack
             development projects in various tech stacks and languages. In these
             experiences, I've built mobile listening apps from scratch and have
-            also built features on top of existing legacy codebases.
+            also built features on top of existing legacy codebases.`
+          }
           </p>
         </div>
       </div>
