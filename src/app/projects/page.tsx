@@ -32,7 +32,7 @@ const projectsData: Project[] = [
         technologies: ["SpringBoot", "Javascript", "Google Maps API"],
         image: "/images/gaucho-ride.png",
         description: "A ride-sharing platform specifically designed for university students.",
-        demoLink: "https://gauchoride.example.com",
+        demoLink: "https://drive.google.com/file/d/1ffvbtnxpviotvK0SP2g1aHOPixn3MQ5r/view?usp=sharing",
         githubLink: "https://github.com/ucsb-cs156-s24/proj-gauchoride-s24-5pm-7"
     },
     {
@@ -41,7 +41,7 @@ const projectsData: Project[] = [
         technologies: ["React-Native", "Firebase", "OCR API"],
         image: "/images/bill-split.png",
         description: "A mobile app that helps groups split bills easily using OCR technology to scan receipts.",
-        demoLink: "https://billsplitter.example.com",
+        demoLink: "https://drive.google.com/file/d/10KPDsOQ8yQqX2xoLYW7o6FMxcz6wvGXp/view?usp=sharing",
         githubLink: "https://github.com/ucsb-cs184-f24/team01-BillSplitter"
     }
 ];
