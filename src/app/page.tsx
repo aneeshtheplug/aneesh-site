@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="title">Aneesh Agarwal</h1>
         <h2 className="position">Full Stack Developer / ML Engineer</h2>
         <p className="description">
-          Experience building full-stack applications and developing complex ML models with a focus on scalability and performance.
+        Experience developing full-stack applications with a user-centric approach, focusing on responsive design, efficient APIs, and optimized database queries for enhanced performance
         </p>
       </div>
 

@@ -11,7 +11,6 @@ export default function NavBar() {
             <ul className="nav-links">
             <li><Link href="/about">About</Link></li>
             <li><Link href="/projects">Projects</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
             </ul>
         </nav>
         );

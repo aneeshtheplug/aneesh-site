@@ -23,7 +23,7 @@ const projectsData: Project[] = [
         technologies: ["Django", "React", "Spotify API"],
         image: "/images/house-party.png",
         description: "A collaborative music playing system that allows users to create rooms and control music playback through Spotify.",
-        demoLink: "https://houseparty.example.com",
+        demoLink: "https://drive.google.com/file/d/1s40CimqGm6IplG3fEejMgEU5tM8McLGD/view?usp=sharing",
         githubLink: "https://github.com/aneeshtheplug/House-Party"
     },
     {
