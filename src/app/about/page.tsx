@@ -19,12 +19,12 @@ export default function About() {
         <h2 className="short-description">
           My name is Aneesh Agarwal, and I am a fourth-year computer science
           major at UCSB from the Bay Area with a strong background in software development with a specialization
-          in machine learning and NLP. 
+          in machine learning and NLP
         </h2>
 
-        {/* Technical Skills Scrolling Section */}
+        {/* Technical Skills Section */}
         <div className="tech-list">
-          <h3>Technical Skills:</h3>
+          <h3 className="left-align">Technical Skills:</h3>
           <div className="marquee">
             <div className="marquee-content">
               {techCards.map((card, index) => (
@@ -42,20 +42,26 @@ export default function About() {
               ))}
             </div>
           </div>
+          <p>
+            I've worked on a variety of tech stacks in the past few years which has forced me to adapt and learn new technologies
+            on the spot, but have always delivered unique projects which I hope you'll find interesting! I truly enjoy
+            working on both sides of the development sphere whether its routing backend API calls to fetch items from a database
+            or rendering responsive UI components in React
+          </p>
         </div>
 
-        {/* About Paragraph Section */}
+        {/* About Section */}
+        <h3 className="left-align">Background:</h3>
         <div className="about-paragraph">
           <p>
-          {
-            `Originally, I entered college as a statistics and data science
+            Originally, I entered college as a statistics and data science
             major but took a few computer science classes and realized my
             interests were more aligned with building software applications.
             I've spent my time in college completing many full-stack
             development projects in various tech stacks and languages. In these
-            experiences, I've built mobile listening apps from scratch and have
-            also built features on top of existing legacy codebases.`
-          }
+            experiences, I've built mobile full stack apps from scratch and have
+            also built features on top of existing legacy codebases which has given
+            me a great skillset for software engineering.
           </p>
         </div>
       </div>

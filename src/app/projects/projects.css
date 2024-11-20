@@ -44,12 +44,12 @@ body, html {
 
 /* Title for the Projects Page */
 .big-title {
+    font-size: 100px;
+    font-weight: bold;
+    color: #0070f3;
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 3rem;
-    font-weight: 900;
-    color: blue;
-}
+    margin: 20px 0;
+  }
 
 /* Project Container */
 .project {
